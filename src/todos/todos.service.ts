@@ -5,10 +5,7 @@ import { Todo, TodoDocument } from './schemas/todo.schema';
 
 @Injectable()
 export class TodosService {
-  constructor(@InjectModel(Todo.name) private todoModel: Model<TodoDocument>) {
-    const mongoURI = process.env.MONGO_URI;
-    // Use mongoURI to connect to the database
-  }
+  constructor(@InjectModel(Todo.name) private todoModel: Model<TodoDocument>) {  }
 
   async findAll(): Promise<Todo[]> {
     return this.todoModel.find({ deleted: false }).exec();
