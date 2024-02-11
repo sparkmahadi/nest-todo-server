@@ -39,7 +39,7 @@ export class TodosController {
     return this.todosService.restore(id);
   }
 
-  @Patch(':id/permanentDelete')
+  @Delete(':id/permanentDelete')
   async permanentDeleteTodo(@Param('id') id: string): Promise<Todo> {
     return this.todosService.permanentDelete(id);
   }
