@@ -15,7 +15,7 @@ export class Todo {
   completed: boolean;
 
   @Prop({ default: false })
-  deleted: boolean; // New field to indicate soft deletion
+  deleted: boolean;
 }
 
 export const TodoSchema = SchemaFactory.createForClass(Todo);
